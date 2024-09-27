@@ -1,6 +1,7 @@
-@import url('var.css');
-@import url('main.css');
-@import url('container.css');
-@import url('components/header.css');
-@import url('components/nav.css');
-@import url('components/premium.css');
+@import 'var.css';
+@import 'main.css';
+@import 'container.css';
+@import 'components/header.css';
+@import 'components/nav.css';
+@import 'components/premium.css';
+@import 'components/main-content.css';
