@@ -32,19 +32,17 @@
   font-size: 0;
 }
 
- .slick-track {
+.slick-track {
   display: flex;
   justify-content: end;
   overflow: hidden;
- }
+}
 
-
- .credit__item {
+.credit__item {
   position: relative;
   display: flex;
   justify-content: end;
- }
-
+}
 
 .credit__card {
   position: relative;
@@ -61,7 +59,7 @@
 }
 
 .credit__card::before {
-  content: 'One time offer!';
+  content: "One time offer!";
 
   position: absolute;
   top: 50%;
@@ -105,40 +103,42 @@
   border-radius: 50%;
 }
 
+.credit__btn {
+  display: none;
+}
 
- .credit__try-now {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 30px auto auto auto;
+.credit__try-now {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px auto auto auto;
 
-    max-width:280px;
-    height: 55px;
-    text-align: center;
-    border-radius: 10px;
-    color: var(--black);
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 18px;
-    background-color: var(--prymari-orange);
- }
+  max-width: 280px;
+  height: 55px;
+  text-align: center;
+  border-radius: 10px;
+  color: var(--black);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+  background-color: var(--prymari-orange);
+}
 
-
- .credit__privacy {
+.credit__privacy {
   display: flex;
   gap: 10px;
   align-items: start;
   margin-top: 15px;
- }
+}
 
- .credit__checkbox-wrapper {
+.credit__checkbox-wrapper {
   position: relative;
   width: 25px;
   height: 25px;
- }
+}
 
- input[type="checkbox"],
- .credit__fake-checkbox {
+input[type="checkbox"],
+.credit__fake-checkbox {
   position: absolute;
   top: 0;
   left: 0;
@@ -147,54 +147,145 @@
   height: 20px;
 }
 
- input[type="checkbox"] {
+input[type="checkbox"] {
   opacity: 0;
   z-index: 99999;
   cursor: pointer;
   margin: 0;
- }
+}
 
- .credit__fake-checkbox {
+.credit__fake-checkbox {
   display: block;
 
   border: 3px solid var(--primary-dark);
   border-radius: 5px;
   z-index: 0;
- }
+}
 
- input[type="checkbox"]:checked+.credit__fake-checkbox {
+input[type="checkbox"]:checked + .credit__fake-checkbox {
   background-color: var(--primary-dark);
   background-image: url("../img/checked.svg");
   background-repeat: no-repeat;
   background-position: center;
- }
+}
 
- .credit__privacy p {
+.credit__privacy p {
   margin: 0;
   font-size: 3vw;
   font-weight: 400;
   line-height: 5vw;
   color: var(--black);
- }
+}
 
- .credit__privacy p a {
+.credit__privacy p a {
   color: var(--primary-light);
- }
+}
 
-
- @media (min-width: 375px) {
+@media (min-width: 375px) {
   .credit__item {
     justify-content: center;
   }
- }
+}
 
-@media(min-width: 768px) {
+@media (min-width: 768px) {
+  .credits__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+    overflow: visible;
+  }
 
-    .credit__privacy {
-        align-items: center;
-    }
+  .credit__item {
+    flex-grow: 1;
+    padding: 17px 15px;
+    width: 150px;
+    min-height: 74px;
+    border-radius: 10px;
+    background-color: var(--primary-dark-opacity-0);
+    border: 2px solid var(--primary-dark);
+    transition: background-color cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.3s;
+  }
 
-    .credit__privacy p {
-        font-size: 2vw;
-    }
+  .credit__card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 11px;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+  }
+
+  .credit__item:hover {
+    background-color: var(--primary-dark);
+  }
+
+  .credit__card::before {
+    width: 95%;
+    top: -31px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+
+  .credit__item:hover .credit__card::before {
+    opacity: 1;
+  }
+
+  .credit__count span:last-child {
+    display: none;
+  }
+
+  .credit__btn {
+    display: flex;
+    padding: 17px 18px;
+    color: var(--black);
+    background-color: var(--white);
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18px;
+    opacity: 0.2;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .credit__item:hover .credit__btn {
+    background-color: var(--prymari-orange);
+    opacity: 1;
+  }
+
+  .credit__item:hover .credit__count {
+    color: var(--white);
+  }
+
+  .credit__count {
+    color: black;
+    margin-right: 0;
+  }
+
+  .credit__privacy {
+    align-items: center;
+  }
+
+  .credit__privacy p {
+    font-size: 14px;
+  }
+
+  .credit__checkbox {
+    width: 20px;
+    height: 20px;
+  }
+
+  .credit__fake-checkbox p {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+  }
+
+  .credit__try-now {
+    display: none;
+  }
 }

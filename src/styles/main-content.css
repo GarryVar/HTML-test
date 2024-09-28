@@ -8,3 +8,27 @@
 
   border-bottom: 2px solid var(--primary-dark-opacity-20);
 }
+
+@media (min-width: 768px) {
+  .main-content {
+    display: grid;
+    grid-template-columns: 270px 1fr;
+    gap: 30px;
+    padding-top: 30px;
+  }
+
+  .main-content__wrapper {
+    grid-column: 2 / -1;
+  }
+
+  .main-content__title {
+    grid-column: 2 / 2;
+    padding-bottom: 20px;
+    padding-top: 0;
+
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 46px;
+    text-shadow: 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}

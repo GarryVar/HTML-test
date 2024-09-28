@@ -38,9 +38,15 @@
 }
 
 .premium-page__feature p {
-  font-size: 4vw;
+  font-size: 12px;
   font-weight: 700;
   line-height: 14px;
   color: var(--primary-dark);
   margin: 0;
+}
+
+@media (min-width: 768px) {
+  .premium-page__feature p {
+    font-size: 20px;
+  }
 }
