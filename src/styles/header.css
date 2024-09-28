@@ -31,3 +31,18 @@
 .header__nav-toggle span:last-child {
     margin-bottom: 0;
 }
+
+@media(min-width: 768px) {
+
+    .header {
+        background-color: var(--primary-dark);
+    }
+
+    .header__logo {
+        display: block;
+    }
+
+    .header__nav-toggle {
+        display: none;
+    }
+}
