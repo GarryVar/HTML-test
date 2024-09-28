@@ -4,6 +4,7 @@
     --primary-light: rgb(165, 100, 174);
     --primary-dark: rgb(149, 100, 170);
     --primary-dark-opacity-20: rgb(149, 100, 170, 20%);
+    --primary-dark-opacity-1: rgba(149, 100, 170, 10%);
     --prirmay-deep-dark: rgb(104, 70, 119);
     --prymari-orange: rgb(255, 207, 45);
     --purple: rgb(193, 92, 161);

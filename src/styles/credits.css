@@ -165,7 +165,7 @@
 
  input[type="checkbox"]:checked+.credit__fake-checkbox {
   background-color: var(--primary-dark);
-  background-image: url("../../img/checked.svg");
+  background-image: url("../img/checked.svg");
   background-repeat: no-repeat;
   background-position: center;
  }

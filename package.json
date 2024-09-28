@@ -5,14 +5,18 @@
   "main": "index.js",
   "scripts": {
     "start": "browser-sync start --server src --no-notify --no-ui --cwd src --files index.html, styles/**/*, img/**/*",
-    "build": "npm run html && npm run styles",
+    "build": "npm run html && npm run styles && npm run copyImages && npm run copyScripts && npm run copyFonts",
     "html": "html-minifier --remove-comments --collapse-whitespace --input-dir src --output-dir dist --file-ext html",
-    "styles": "postcss src/styles/index.css  --use postcss-import --use postcss-csso --no-map --output dist/styles/index.css"
+    "styles": "postcss src/styles/index.css  --use postcss-import --use postcss-csso --no-map --output dist/styles/index.css",
+    "copyImages": "copyfiles  -f src/img/**/*  dist/img/",
+    "copyScripts": "copyfiles  -f src/scripts/**/*  dist/scripts/",
+    "copyFonts": "copyfiles  -f src/fonts/**/*  dist/fonts/"
   },
   "author": "garryvar",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^3.0.2",
+    "copyfiles": "^2.4.1",
     "html-minifier": "^4.0.0",
     "postcss-cli": "^11.0.0",
     "postcss-csso": "^6.0.1",

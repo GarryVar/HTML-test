@@ -1,9 +1,9 @@
 @import 'var.css';
 @import 'main.css';
 @import 'container.css';
-@import 'components/header.css';
-@import 'components/nav.css';
-@import 'components/premium.css';
-@import 'components/main-content.css';
-@import 'components/credits.css';
-@import 'components/premium-page.css';
+@import 'header.css';
+@import 'nav.css';
+@import 'premium.css';
+@import 'main-content.css';
+@import 'credits.css';
+@import 'premium-page.css';
