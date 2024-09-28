@@ -171,7 +171,7 @@ input[type="checkbox"]:checked + .credit__fake-checkbox {
 
 .credit__privacy p {
   margin: 0;
-  font-size: 3vw;
+  font-size: 14px;
   font-weight: 400;
   line-height: 5vw;
   color: var(--black);
@@ -191,7 +191,8 @@ input[type="checkbox"]:checked + .credit__fake-checkbox {
   .credits__list {
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 30px;
+    column-gap: 30px;
+    row-gap: 16px;
     overflow: visible;
   }
 
@@ -204,6 +205,29 @@ input[type="checkbox"]:checked + .credit__fake-checkbox {
     background-color: var(--primary-dark-opacity-0);
     border: 2px solid var(--primary-dark);
     transition: background-color cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.3s;
+  }
+
+  .credit__item:last-child {
+    height: 74px;
+    background-color: var(--soft-brown);
+    border: 2px solid var(--brown);
+  }
+
+  .credit__item:last-child .credit__card {
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 40px;
+  }
+
+  .credit__item:last-child .credit__card::before {
+    top: 50%;
+    transform: translateY(-50%);
+    left: -30px;
+    width: fit-content;
+  }
+
+  .credit__item:last-child .credit__card .credit__btn {
+    width: 185px;
   }
 
   .credit__card {
@@ -227,6 +251,7 @@ input[type="checkbox"]:checked + .credit__fake-checkbox {
     top: -31px;
     left: 50%;
     transform: translateX(-50%);
+    color: var(--black);
     opacity: 0;
   }
 
@@ -240,21 +265,21 @@ input[type="checkbox"]:checked + .credit__fake-checkbox {
 
   .credit__btn {
     display: flex;
+    justify-content: center;
     padding: 17px 18px;
-    color: var(--black);
+    color: var(--primary-dark-opacity-0);
     background-color: var(--white);
     font-family: inherit;
     font-size: 16px;
     font-weight: 500;
     line-height: 18px;
-    opacity: 0.2;
     border-radius: 5px;
     cursor: pointer;
   }
 
   .credit__item:hover .credit__btn {
     background-color: var(--prymari-orange);
-    opacity: 1;
+    color: var(--black);
   }
 
   .credit__item:hover .credit__count {
@@ -266,12 +291,9 @@ input[type="checkbox"]:checked + .credit__fake-checkbox {
     margin-right: 0;
   }
 
-  .credit__privacy {
-    align-items: center;
-  }
-
   .credit__privacy p {
     font-size: 14px;
+    line-height: 20px;
   }
 
   .credit__checkbox {

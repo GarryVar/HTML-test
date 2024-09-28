@@ -35,4 +35,20 @@
 
 .user__nav-bar {
   display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+}
+
+.user__nav-item {
+  display: flex;
+  column-gap: 30px;
+  align-items: center;
+}
+
+.user-nav__icon {
+  display: block;
+}
+
+.user__nav-link {
+  color: var(--black);
 }
