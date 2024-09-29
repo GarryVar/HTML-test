@@ -1,0 +1,48 @@
+.discount {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .discount {
+    display: block;
+  }
+
+  .discount__content {
+    padding: 13px;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: var(--discount-bg);
+  }
+
+  .discount__count {
+    font-size: 40px;
+    margin: 0;
+    font-weight: 700;
+    line-height: 46px;
+    color: var(--prymari-orange);
+    text-shadow: -1px 0 var(--white), 0 1px var(--white), 1px 0 var(--white),
+      0 -1px var(--white);
+  }
+
+  .discount__deadline {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+
+    color: var(--white);
+  }
+}
+
+@media (min-width: 1200px) {
+  .discount__content {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  .discount__deadline {
+    font-size: 14px;
+  }
+}
