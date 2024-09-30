@@ -82,7 +82,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     justify-self: center;
-    height: 150px;
+    height: 110px;
     object-fit: cover;
   }
 
