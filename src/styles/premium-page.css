@@ -15,6 +15,7 @@
   align-items: center;
   gap: 10px;
   margin-bottom: 10px;
+  width: 100%;
 }
 
 .premium-page__feature:last-child {
@@ -45,8 +46,75 @@
   margin: 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
+  .premium-page__content {
+    position: relative;
+
+    width: 320px;
+    height: 320px;
+    margin: auto;
+    margin-top: 60px;
+
+    flex-direction: row;
+    align-items: start;
+    flex-wrap: wrap;
+  }
+
+  .premium-page__feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: min-content;
+  }
+
+  .premium-page__content img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-self: center;
+    height: 150px;
+    object-fit: cover;
+  }
+
   .premium-page__feature p {
-    font-size: 20px;
+    font-size: 12px;
+  }
+
+  .premium-page__feature {
+    position: absolute;
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .premium-page__feature--message {
+    top: 0;
+    left: 60px;
+  }
+
+  .premium-page__feature--settings {
+    left: 60px;
+    bottom: -20px;
+  }
+  .premium-page__feature--other {
+    top: 0;
+    right: 10px;
+    width: 50%;
+    text-align: center;
+  }
+  .premium-page__feature--gifts {
+    transform: translateY(-50%);
+    top: 50%;
+    right: -20px;
+  }
+  .premium-page__feature--spy-watch {
+    top: 50%;
+    transform: translateY(-50%);
+    left: -30px;
+  }
+
+  .premium-page__feature--last {
+    bottom: 10px;
+    right: 60px;
   }
 }

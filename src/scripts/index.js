@@ -33,10 +33,10 @@ const timer = () => {
         minutesDigit.textContent = `0${minute}`;
 
         if (minute <= 0) {
-          minute = "00";
+          minute = 30;
           minutesDigit.textContent = minute;
 
-          sec = "00";
+          sec = 60;
           secDigit.textContent = sec;
         }
       }

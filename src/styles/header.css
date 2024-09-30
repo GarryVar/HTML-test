@@ -34,9 +34,12 @@
 
 @media (min-width: 768px) {
   .header {
+    background-color: var(--primary-dark);
+  }
+
+  .header__container {
     padding-left: 30px;
     padding-right: 30px;
-    background-color: var(--primary-dark);
   }
 
   .header__logo {
@@ -58,8 +61,7 @@
 @media (min-width: 1200px) {
   .header__container {
     margin: auto;
-    padding: 0 15px 0 15px;
-    width: 1270px;
+    width: 1200px;
     height: 100px;
   }
 }
