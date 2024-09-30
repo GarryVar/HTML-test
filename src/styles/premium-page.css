@@ -38,6 +38,13 @@
   fill: var(--primary-dark);
 }
 
+.premium-page__feature:hover,
+.premium-page__feature:focus,
+.premium-page__feature span:hover svg,
+.premium-page__feature span:focus svg {
+  fill: var(--prymari-orange);
+}
+
 .premium-page__feature p {
   font-size: 12px;
   font-weight: 700;
@@ -53,7 +60,9 @@
     width: 320px;
     height: 320px;
     margin: auto;
-    margin-top: 60px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 0;
 
     flex-direction: row;
     align-items: start;
@@ -79,6 +88,7 @@
 
   .premium-page__feature p {
     font-size: 12px;
+    text-align: center;
   }
 
   .premium-page__feature {

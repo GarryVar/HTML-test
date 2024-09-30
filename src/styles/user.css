@@ -49,6 +49,15 @@
   display: block;
 }
 
+.user__nav-icon svg {
+  fill: var(--primary-dark);
+}
+
+.user__nav-item:hover svg,
+.user__nav-item:focus svg {
+  fill: var(--prymari-orange);
+}
+
 .user__nav-link {
   color: var(--black);
 }
